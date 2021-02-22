@@ -1,0 +1,317 @@
+@font-face {
+    src: url("../fonts/BMJUA_ttf.ttf");
+    font-family: Jua;
+  }  
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F0E8D9;
+  }
+  
+  h1 {   /*가운데정렬 h1.h2에 적용*/
+    text-align: center;
+    font-size: 64px;
+    color: #58595B;
+    margin-top: 75px;
+    margin-bottom: 30px;
+    font-family: Jua; 
+  }
+  
+  
+  h2{
+    text-align: center;
+    font-size: 32px;
+    color: #58595B;
+    margin-bottom: 75px;
+    font-family: Jua; 
+    }
+    
+    .dog {
+      background-color: white;  
+      /*div태그는 원래 가로길이를 전체를 차지함!!*/
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto; /*가운데정렬을위해 지정해줌*/
+      border-radius: 10px; /*이부분은 모서리를 둥글게 만들어주기위해서 작성 */
+      margin-bottom: 50px; /*이미지 사이사이의 간격을 두기 위해서 작성*/
+    }
+    
+    .dog img {
+      border-top-right-radius: 10px;
+      border-top-left-radius:10px   /*처음모서리를 둥글게 위에서 설정해줘도
+      사진의 이미지부분에는 사진이 모서리의 둥근부분을 덮어주므로 새로 img설정 내용을작성해서
+      왼쪽위와 오른쪽 윗부분의 모서리를 따로 둥글게 설정하도록 작성해주어야함.
+      이방법말고 다른 방법으로는 .dog 부분에 ===>overflow: hidden;을 적어주면된다.
+      그러면 그 부분의 div태그에서 삐져나오는 직각부분은 다없애줌.*/
+      
+    }
+    .dog h3 {  
+      color: #58595b;
+      font-size: 32px;
+      font-family: Jua;
+      margin-top: 0;
+      margin-bottom: 20px;
+      
+    }
+    .dog .info{
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .dog p {
+      color: #58595b;
+      font-size: 18px;
+      font-family: Jua;
+      margin-top: 0;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    
+    .dog a {
+      color: #0000ee;
+      font-size: 16px;
+      font-family: Jua;
+      text-decoration: none; 
+    }
+
+    
+
+
+
+
+    /* 글자 효과 애니메이션 */
+    .home span {
+        display: inline-block;
+        margin: 0 -.05em;
+        animation: loading .7s infinite;
+      }
+      .home span:nth-child(2) {
+        animation-delay: .1s;
+      }
+      .home span:nth-child(3) {
+        animation-delay: .2s;
+      }
+      .home span:nth-child(4) {
+        animation-delay: .3s;
+      }
+      .home span:nth-child(5) {
+        animation-delay: .4s;
+      }
+      .home span:nth-child(6) {
+        animation-delay: .5s;
+      }
+      .home span:nth-child(7) {
+        animation-delay: .6s;
+      }
+      .home span:nth-child(8) {
+        animation-delay: .7s;
+      }
+      @keyframes loading {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(15px);
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+      /* css 글자 애니메이션 2번 -- 코드 인용하여 변형  */
+      @font-face {
+        font-family: Clip;
+        src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+      }
+      
+      body {
+        background-color: #141114;
+        background-image: linear-gradient(335deg, black 23px, transparent 23px),
+          linear-gradient(155deg, black 23px, transparent 23px),
+          linear-gradient(335deg, black 23px, transparent 23px),
+          linear-gradient(155deg, black 23px, transparent 23px);
+        background-size: 58px 58px;
+        background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+      }
+      
+      .sign {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        background-image: radial-gradient(
+          ellipse 50% 35% at 50% 50%,
+          #6b1839,
+          transparent
+        );
+        transform: translate(-50%, -50%);
+        letter-spacing: 2;
+        left: 50%;
+        top: 50%;
+        font-family: "Clip";
+        text-transform: uppercase;
+        /* font-size: 6em; */
+        font-size: 1em;
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+          -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+          0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+        animation: shine 2s forwards, flicker 3s infinite;
+      }
+      
+      @keyframes blink {
+        0%,
+        22%,
+        36%,
+        75% {
+          color: #ffe6ff;
+          text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+        }
+        28%,
+        33% {
+          color: #ff65bd;
+          text-shadow: none;
+        }
+        82%,
+        97% {
+          color: #ff2483;
+          text-shadow: none;
+        }
+      }
+      
+      .flicker {
+        animation: shine 2s forwards, blink 3s 2s infinite;
+      }
+      
+      .fast-flicker {
+        animation: shine 2s forwards, blink 10s 1s infinite;
+      }
+      
+      @keyframes shine {
+        
+        0% {
+          color: #6b1839;
+          text-shadow: none;
+        }
+
+        100% {
+          color: #ffe6ff;
+          
+          text-shadow: 
+          0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+         -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+          0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+        }
+      }
+      
+      @keyframes flicker {
+        from {
+          opacity: 1;
+        }
+        4% {opacity: 0.9;}
+        6% {opacity: 0.85;}
+        8% {opacity: 0.95;}
+        10% {opacity: 0.9;}
+        11% {opacity: 0.922;}
+        12% {opacity: 0.9;}
+        14% {opacity: 0.95;}
+        16% {opacity: 0.98;}
+        17% {opacity: 0.9;}
+        19% {opacity: 0.93;}
+        20% {opacity: 0.99;}
+        24% {opacity: 1;}
+        26% {opacity: 0.94;}
+        28% {opacity: 0.98;}
+        37% {opacity: 0.93;}
+        38% {opacity: 0.5;}
+        39% {opacity: 0.96;}
+        42% {opacity: 1;}
+        44% {opacity: 0.97;}
+        46% {opacity: 0.94;}
+        56% {opacity: 0.9;}
+        58% {opacity: 0.9;}
+        60% {opacity: 0.99;}
+        68% {opacity: 1;}
+        70% {opacity: 0.9;}
+        72% {opacity: 0.95;}
+        93% {opacity: 0.93;}
+        95% {opacity: 0.95;}
+        97% {opacity: 0.93;}
+
+        to {opacity: 1;}
+      }
+
+      
+@media only screen and (max-width: 1920px) {
+  h1 {
+    font-size: 92px;
+  }
+  h2 {
+    font-size: 72px;
+  }
+  .dog {
+    width: 800px;
+    height: 100%;
+  }
+  .dog img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  
+}
+
+@media only screen and (max-width: 1280px) {
+  .dog {
+    /* width: calc(100% - 600px); */
+    /* max-width: 600px; */
+    width: 50%;
+    height: 100%;
+  }
+  
+}
+@media only screen and (max-width: 1023px) {
+  h1 {font-size: 60px;}
+  h2 {font-size: 60px;}
+}
+
+@media only screen and (max-width: 767px) {
+  .dog {
+    width: calc(100% - 200px);
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .dog {
+    width: calc(100% - 60px);
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+      

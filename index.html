@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="So">
+    <link rel="icon" type="image/png" href="./images/home-background.png"/>
+
+    <!--폰트 어썸 - CDN-->
+    <script src="https://kit.fontawesome.com/cc982bbf97.js" crossorigin="anonymous">
+    </script>
+
+    <!--폰트-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <!--JS-->
+    <!-- 플러그인 - 글씨체 - fittext.js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" defer></script>
+    <script src="./js/jquery.fittext.js" defer></script>
+
+    <!-- 메인 -->
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+    <!--
+        ################################ 
+        Navbar 부분 = 크게 2가지로 나뉨 
+        ################################
+        -->
+    <nav id="navbar">
+        <div class="navbar_logo">
+            <i class="fas fa-address-card"></i>
+            <!--로고 이미지부분을 i태그말고
+            img 태그로 이미지 넣어서 적용해보기!!!
+        vertical-align: middle;속성 써보기!
+    토론질문 a태그로 시작하는 질문 참고!! -->
+            <a href="#">S.G.W</a>
+        </div>
+
+        <!-- id 각각 버튼 클릭시 스크롤링 되는거 설정할때
+        data-link에 적혀있는 id와 html태그에 적어놓은 id랑 이름값이
+    일치해야 js코드에서 오류가 없이 잘 작동된다!! -->
+        <ul class="navbar_menu">
+            <li class="navbar_menu_item active" data-link="#home">Home</li>
+            <li class="navbar_menu_item" data-link="#about">About</li>
+            <li class="navbar_menu_item" data-link="#skills">Skills</li>
+            <li class="navbar_menu_item" data-link="#works">My Works</li>
+            <li class="navbar_menu_item" data-link="#aim">Aim</li>
+            <li class="navbar_menu_item" data-link="#contact">Contact</li>
+        </ul>
+
+        <!-- Toggle Button 설정 부분 -반응형과 관련된 부분 -->
+        <button class="navbar_toggle-btn">
+            <!-- <i class="fas fa-hamburger"></i> -->
+            <i class="fas fa-stream"></i>
+        </button>
+    </nav>
+
+    <!--
+        ################################
+        Home 부분 
+    ################################-->
+    <section id="home">
+       <div class="home_container">
+        <img 
+        src="./images/home-background002.png" 
+        alt="Sowoo's logo photo" 
+        class="home_avatar"
+        />
+
+        <!-- <h1 class="home_title">Hello, <br/>I'm Potential Coder</h1> -->
+        <h1 class="slow" id="fittext3">
+            <span>안</span>
+            <span>녕</span>
+            <span>하</span>
+            <span>세</span>
+            <span>요</span>
+        </h1>
+        <h2 class="home_description">열정 가득하고 무궁무진한 가능성을 가진 WEB Publisher</h2>
+
+        
+        <button class="home_contact">Contact ME</button>
+       </div>
+    </section>
+
+    <!--
+        ################################
+         About 부분 == 총 4가지로 구분 
+        ################################
+        -->
+    <section id="about" class="section section_container">
+        <h1>☝ About Me</h1>
+        <p>대학교 전공을 배우면서 많은 내용을 배웠지만 그중에서도 웹 분야에 대한 관심이
+            매우 높았고 웹과 관련된 전문가가 되고 싶은 생각을 가지게 되어 웹 프로그래머를 꿈꾸게 되었습니다.
+            현재는 ES6-Javascript를 중심으로 끝없이 학습하면서 많은 노력을 하고 있습니다.
+            그 외 다른 분야의 언어까지 섭렵하여 좋은 코드를 생성할 수 있는 프론트엔드 개발자로 성장하고 싶습니다.
+        </p>
+
+        <!-- 3개가 필요 -- 1,2,3-->
+        <div class="about_majors">
+            <div class="major">
+                <div class="major_icon">
+                    <i class="far fa-hand-rock"></i>
+                </div>
+                <h2 class="major_title">2020.02월~04월</h2>
+                <div class="major_description">
+                    기본적인 HTML, CSS를 중심으로 실습 및 학습<br/> 
+                    HTML / CSS
+                </div>
+            </div>
+
+            <div class="major">
+                <div class="major_icon">
+                    <i class="far fa-hand-scissors"></i>
+                </div>
+                <h2 class="major_title">2020.05월~07월</h2>
+                <div class="major_description">
+                    <!-- 한단계 나아가 HTML,CSS,JavaScript를 활용한<br/> 실습 및 학습 -->
+                    <!-- 기본적인 HTML, CSS를 중심으로 실습 및 학습 -->
+                    HTML,CSS, JavaScript를 활용한 실습 및 학습<br/>
+                    HTML / CSS / JavaScript 
+                    <br/>
+                </div>
+            </div>
+
+            <div class="major">
+                <div class="major_icon">
+                    <i class="far fa-hand-paper"></i>
+                </div>
+                <h2 class="major_title">2020.08월~11월</h2>
+                <div class="major_description">
+                    <!-- HTML, CSS, Javascript(ES6), React, SASS 등을<br/> 학습 중 -->
+                    <!-- 기본적인 HTML, CSS를 중심으로 실습 및 학습 -->
+                    Responsive Web 사이트 개발을 위해 PC<br/>
+                    Mobile,Tablet 사이즈 버전 제작을 위한 학습 
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 직업 관련 경험 나타내는 부분 -->
+        <div class="about_jobs">
+            <!-- 1번 직업 경험 부분 -->
+            <div class="job">
+                <img 
+                src="./images/third.PNG" 
+                alt="amanta" 
+                class="job_logo first">
+                <div class="job_description">
+                <p class="job_name">천재,해법,t셀파 등등의 플래시 교과서 컨텐츠의 html,css 변환작업을 하는 
+                아만타라는 회사에서 근무
+                </p>
+                <p class="job_period">2020 04 - 2020 08    
+                </p>
+            </div>
+            </div>
+
+            <!-- 2번 직업 경험 부분 -->
+            <div class="job">
+                <img 
+                src="./images/second.PNG" 
+                alt="yongin" 
+                class="job_logo second">
+                <div class="job_description">
+                    <p class="job_name">용인대학교 컴퓨터과학과 전공
+                    </p>
+                    <p class="job_period">2014년 03월 - 2021년 졸업예정(수료중)     
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--
+        ################################
+                Skills 부분 
+        ################################
+        -->
+    <section id="skills" class="section">
+        <div class="section_container">
+        <h1>✌ Skills</h1>
+        <h2>Skills & Tools</h2>
+        <p>
+            웹 퍼블리셔가 되기위해 html,css,javascript를 중심으로 학습하고 실습하며 연습해왔고,</br>
+            현재는 반응형 웹 페이지를 제작하기 위해 여러 페이지들을 제작해보는 연습을 하고있습니다.
+        </p>
+
+        <div class="skillset">
+            <!-- 왼쪽 부분 -->
+            <div class="skillset_left">
+                <h3 class="skillset_title">Skills</h3>
+                <!-- 1번 skill -->
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>HTML</span>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="skill_bar">
+                        <div class="skill_value" style="width: 80%;"></div>
+                    </div>
+                </div>
+               
+                 <!-- 2번 skill -->
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>CSS</span>
+                        <!-- <i class="fas fa-check-circle">  CSS3 (Flexbox 포함)</i>  <i class="fas fa-check-circle">  반응형 레이아웃</i> -->
+                        <span>80%</span>
+                    </div>
+
+                    <div class="skill_bar">
+                        <div class="skill_value" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                 <!-- 3번 skill -->
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>JavaScript</span>
+                        <!-- <i class="fas fa-check-circle"> Vanilla(ES6 활용 가능)</i> -->
+                        <span>65%</span>
+                    </div>
+
+                    <div class="skill_bar">
+                        <div class="skill_value" style="width: 65%;"></div>
+                    </div>
+                </div>
+
+                 <!-- 4번 skill -->
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>Git & GitHub</span>
+                        <span>60%</span>
+                    </div>
+
+                    <div class="skill_bar">
+                        <div class="skill_value" style="width: 60%;"></div>
+                    </div>
+                </div>
+
+                 <!-- 5번 skill -->
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>React</span>
+                        <span>15%</span>
+                    </div>
+
+                    <div class="skill_bar">
+                        <div class="skill_value" style="width: 15%;"></div>
+                    </div>
+                </div>
+
+                 <!-- 6번 skill -->
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>Java & Python</span>
+                        <span>40%</span>
+                    </div>
+
+                    <div class="skill_bar">
+                        <div class="skill_value" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 오른쪽 부분 -2가지 tools 와 etc 부분 -->
+            <div class="skillset_right">
+                <div class="tools">
+                    <h3 class="skillset_title">🤹 사용 가능한 Tools 🤹</h3>
+                    <ul class="tools_list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>Visual Studio</span></li>
+                        <li><span>PyCharm</span></li>
+                        <li><span>Git Bash</span></li>
+                        <li><span>Sublime Text</span></li>
+                    </ul>
+                </div>
+
+                <div class="etc">
+                    <h3 class="skillset_title">🏃‍♂ Etc 🏃‍♂</h3>
+                    <ul class="etc_list">
+                        <li><span>Unity 3D</span></li>
+                        <li><span>Git Hub DeskTop</span></li>
+                        <li><span>Source Tree</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>   
+    </section>
+
+
+
+    <!-- works 부분에도 section_container이라는 div로 감싸는 태그를 하나 만들어준 후에
+    works안에 원래있던 내용들을 다시 div 태그안에 감싸줘야 함!!! -->
+
+    <!--
+        ################################
+                Works 부분 
+        ################################
+        -->
+    <section id="works" class="section">
+        <div class="section_container">
+            <h1>☝✌My Works</h1>
+        <h3>Projects</h3>
+        <div class="work_categories">
+
+            <!--category_btn active에서  category_btn selected로 바꿔준것임! -->
+            <button class="category_btn selected" data-filter="*">
+                All<span class="category_count">8</span>
+            </button>
+            <button class="category_btn" data-filter="first">
+                2020 / 08<span class="category_count">3</span>
+            </button>
+            <button class="category_btn" data-filter="second">
+                2020 / 09<span class="category_count">3</span>
+            </button>
+            <button class="category_btn" data-filter="third">
+                2020 / 10<span class="category_count">2</span>
+            </button>
+        </div>
+
+        <div class="work_projects">
+            <!-- 1번 프로젝트 -->
+            <a href="./animal.html" 
+            class="project"
+            target="blank"
+            data-type="third">
+            <img 
+            class="project_img go"
+            src="./images/projects/shop-5.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>Animal List</h3>
+                <span>간단한 동물의 왕국 리스트</span>
+            </div>
+            </a>
+
+            <!-- 2번 프로젝트 -->
+            <a href="./shopping.html" 
+               class="project"
+               target="blank"
+               data-type="second"
+            >
+            <img 
+            class="project_img"
+            src="./images/projects/shop-12.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>Simple Shop Site</h3>
+                <span>아주 심플한 웹 쇼핑몰</span>
+            </div>
+            </a>
+
+            <!-- 3번 프로젝트 -->
+            <a href="./streaming.html" 
+               class="project"
+               target="blank"
+               data-type="first"
+            >
+            <img 
+            class="project_img"
+            src="./images/projects/music-2.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>Music Site</h3>
+                <span>간단 명료한 음악 스트리밍 사이트</span>
+            </div>
+            </a>
+
+            <!-- 4번 프로젝트 -->
+            <a href="./myproject.html" 
+            class="project"
+            target="blank"
+            data-type="second"
+            >
+            <img 
+            class="project_img"
+            src="./images/projects/drum-4.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>DJ Player</h3>
+                <span>키보드를 입력하여 실행하는 악기놀이</span>
+            </div>
+            </a>
+
+            <!-- 5번 프로젝트 -->
+            <a href="youtube.html" 
+               class="project"
+               target="blank"
+               data-type="third"
+            >
+            <img 
+            class="project_img"
+            src="./images/projects/yoututu-8.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>Youtube Site</h3>
+                <span>유튜브 사이트 - 클론코딩 제작</span>
+            </div>
+            </a>
+
+            <!-- 6번 프로젝트 --> 
+            <a href="./finaldice.html" 
+               class="project"
+               target="blank"
+               data-type="first"
+            >
+            <img 
+            class="project_img"
+            src="./images/projects/dice-9.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>Cube play Site</h3>
+                <span>1 ~ 2개의 주사위굴리기</span>
+            </div>
+            </a>
+
+            <!-- 7번 프로젝트 -->
+            <a href="./love.html" 
+               class="project"
+               target="blank"
+               data-type="first"
+            >
+            <img 
+            class="project_img"
+            src="./images/projects/couple-1.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>Couple Day</h3>
+                <span>연인과의 만날날을 알고싶다면?</span>
+            </div>
+            </a>
+
+            <!-- 8번 프로젝트 -->
+            <a href="./puppylist.html" 
+               class="project"
+               target="blank"
+               data-type="second"
+            >
+            <img
+            class="project_img"
+            src="./images/projects/puppy01.jpg" 
+            alt="Youtube">
+            <div class="project_description">
+                <h3>My Favorite Puppy</h3>
+                <span>키우고 싶은 강아지들</span>
+            </div>
+            </a>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!--다 작성하고 testimonials 부분에 section_container이라는 div 태그를 하나 만들어서
+    testimonials부분의 내용을 다시 이 div태그안에 넣어주어야 사이즈가 고정된다!-->
+    
+    <!--
+        ################################
+                Testimonials 부분 
+        ################################
+        -->
+    <section id="aim" class="section">
+        <div class="section_container">
+            <h1>✊ My Object</h1>
+            <h3>웹 퍼블리셔가 되기 위한 목표</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img 
+                    src="./images/testimonial/1.PNG" 
+                    alt="People" 
+                    class="testimonial_avatar"
+                    />
+                    <div class="testimonial_speech-bubble">
+                        <p>첫째로, 항상 쉽고 간단하게 코드를 작성할 수 있도록 끊임없이
+                        웹표준을 준수하는 반응형 웹 사이트를 제작하는 실습을 하여 무수한 결과물들을
+                        만들어내도록 멈추지 않을 것입니다.
+                        </p>
+                        <p class="name"><a href="">목표(1)</a> - 끈기 and 노력</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    
+                    <div class="testimonial_speech-bubble">
+                        <p>둘째로, 새로운 신기술들과 디자인 부분(Photoshop,Adobe XD)까지 섭렵하여
+                            디자이너 분들과도 협업을 원활하게 할 수 있도록 제대로 익혀서 언제 어디서든 
+                            준비가 되어 있도록 스스로를 업그레이드 시켜놓을 것입니다.
+                        </p>
+                        <p class="name"><a href="">목표(2)</a> - 성장 and 협동심</p>
+                    </div>
+                    <img 
+                    src="./images/testimonial/2.PNG" 
+                    alt="People" 
+                    class="testimonial_avatar"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--################################
+                Contact 부분 
+        ################################
+        -->
+    <section id="contact" class="section">
+        <h1 class="contact_title">✋ Let's talk</h1>
+        <h2 class="contact-tel">Tel : 010-8506-9714</h2>
+        <h2 class="contact_email">thruddn890@gmail.com</h2>
+        
+        <div class="contact_links">
+            <a href="https://github.com/thruddn11/index.html/tree/master" target="blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.google.com/" target="blank">
+                <!-- <i class="fa fa-linkedin-square"></i> -->
+                <i class="fab fa-google"></i>
+            </a>
+        </div>
+        <p class="contact_rights">
+            2020 S.G.W portfolio
+        </p>
+    </section>
+
+    <!-- Arrow up 버튼 만들기!! -->
+    <button class="arrow-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+
+   
+</body>
+</html>

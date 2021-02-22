@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Launchpad</title>
+    <meta charset="utf-8" />
+    <link href="css/mumu.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="pad">
+      <img class="tv" src="./images/Drum-play/television.png">
+      <button id="play-btn">
+        <img src="./images/Drum-play/play.png" width="60" height="60">
+      </button>
+      <button id="stop-btn">
+        <img src="./images/Drum-play/stop.png" width="60" height="60">
+      </button>
+      <button id="pause-btn">
+          <img src="./images/Drum-play/pause.png" width="60" height="60">
+      </button>
+
+      <section class="cell-container">
+        <div class="cell blue" id="cell7">
+          <div class="key">7</div>
+          <div class="instrument">Kick</div>
+        </div>
+
+        <div class="cell blue" id="cell8">
+          <div class="key">8</div>
+          <div class="instrument">Closed<br>Hi-hat</div>
+        </div>
+
+        <div class="cell blue" id="cell9">
+          <div class="key">9</div>
+          <div class="instrument">Open<br>Hi-hat</div>
+        </div>
+
+        <div class="cell red" id="cell4">
+          <div class="key">4</div>
+          <div class="instrument">Clap</div>
+        </div>
+
+        <div class="cell red" id="cell5">
+          <div class="key">5</div>
+          <div class="instrument">Snap</div>
+        </div>
+
+        <div class="cell red" id="cell6">
+          <div class="key">6</div>
+          <div class="instrument">Crash</div>
+        </div>
+
+        <div class="cell purple" id="cell1">
+          <div class="key">1</div>
+          <div class="instrument">Tom 1</div>
+        </div>
+
+        <div class="cell purple" id="cell2">
+          <div class="key">2</div>
+          <div class="instrument">Tom 2</div>
+        </div>
+
+        <div class="cell purple" id="cell3">
+          <div class="key">3</div>
+          <div class="instrument">Tambourine</div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      
+      //드럼킷
+      var audioFiles = [];
+      audioFiles.push(new Audio("audio/01_kick_drum.wav"));
+      audioFiles.push(new Audio("audio/02_closed_hihat.wav"));
+      audioFiles.push(new Audio("audio/03_open_hihat.wav"));
+      audioFiles.push(new Audio("audio/04_clap.wav"));
+      audioFiles.push(new Audio("audio/05_snap.wav"));
+      audioFiles.push(new Audio("audio/sooo.mp3"));
+      audioFiles.push(new Audio("audio/so.mp3"));
+      audioFiles.push(new Audio("audio/08_tom2.wav"));
+      audioFiles.push(new Audio("audio/09_tambourine.wav"));
+      
+      
+      
+      
+       // $('.cell').addClass('playing')를 소스창에 입력해보기!!
+      var loop = new Audio('audio/lauv.mp3');
+      
+      $('#play-btn').on('click', function()  {
+      loop.play();
+      });
+      
+      $('#pause-btn').on('click', function() {
+      loop.pause();
+      });
+
+      $('#stop-btn').on('click', function() {
+      loop.pause();
+      loop.currentTime = 0;
+      });
+      
+      //$(document).on('keydown', function(event) {
+      //console.log(event.key);  // 지금 이상태까지 입력하고 소스창에 키보드 입력하면 표시가 나온다
+      //});
+      $(document).on('keydown', function(event){
+        
+        //console.log($('#cell' + event.key));  //이 괄호안의 내용을 입력해주면 소스창에서
+        //키보드를 입력했을때 각 셀의 아이디를 받아올 수 있게된다.!!!
+      if (Number(event.key) >= 1 && Number(event.key) <= 9)  { //다른 키를 입력했을때 오류가 나지않도록 설정해준것임!!!
+      $('#cell' + event.key).addClass('playing');
+      var cur = audioFiles[Number(event.key) -1]; // 이내용에서 만약에 키보드 1을 누르면
+      //event.key는 1이기 때문에 1-1 = 0 그러므로 위의 new Audio부분의 0번인덱스인 01_kick_drum 이
+      //얘가 변수  cur에 들어가고 cur.play();가 실행된다.
+      cur.currentTime = 0; //이걸 적어주면 계속 여러번 눌러 소리가 바로 나오도록하게 해줌!
+      cur.play();
+      }
+      });//이내용을 적고 소스창을 실행시키면
+        //숫자 키보드를 눌리면 화면에눌린표시가 나타난다. - 대신 꺼지지가않음
+        //이를 위해서 keyup을 또 따로 지정해줘야함!
+      $(document).on('keyup', function() {
+      $('.cell').removeClass('playing');
+      });  //이내용까지 작성을 해주어야 키보드를 떼게되면 모양 누른 표시가 사라지게 
+      //모든 클래스에 적용이된다 모든클래스 - .class 로 적어서 적용시켜주기!!
+    </script>
+  </body>
+</html>

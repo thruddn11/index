@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Couple Story</title>
+    <meta charset="utf-8" />
+    <link href="css/love.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <img id="logo" src="./images/Couple/couplegri.png" width="157">
+    </div>
+
+    <div class="main">
+      <div class="container">
+        
+        <h2>만난날은 <span id="day-count">00</span>일째</h2>
+
+        <div class="img-row">
+          <img src="./images/Couple/man.png" width="148">
+          <img src="./images/Couple/dot.png" width="8">
+          <img src="./images/Couple/dot.png" width="8">
+          <img src="./images/Couple/heart.png" width="16">
+          <img src="./images/Couple/dot.png" width="8">
+          <img src="./images/Couple/dot.png" width="8">
+          <img src="./images/Couple/woman.png" width="148">
+        </div>
+
+        <!-- 만나기 시작한 날짜 -->
+        <div class="date-row">
+          <label for="start">시작일</label>
+          <input type="date" name="start" id="start">
+        </div>
+
+        <!-- 며칠됐는지 계산하기! -->
+        <button id="calculate">결과 보기</button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      
+      //이벤트 등록
+      $('#calculate').on('click', calculateDate);
+      //먼저 결과보기 버튼에 이벤트를 연결해주어서 버튼이 클릭될 때 함수가 실행되도록 해줘야함.
+      function calculateDate() {
+        //버튼을 눌렀을 때 실행될 코드
+      //두개의 date 객체가 필요 - 하나는 현재의 날짜/ 다른하나는 input에 지정된 날짜 필요!!!  
+      //Date 객체 만들기
+        var now = new Date();
+        var startDate = new Date($('#start').val());
+        //이제 두 날짜의 차이를 구하기
+        //getTime의 값은 ms단위로 나오기 때문에 날짜 단위로 변환하기 위해서는
+        // /1000 / 60 / 60 / 24를 해주면 된다.
+        //1000 (ms -> sec), 60 (sec -> min), 60 (min -> hour), 24 (hour -> day)
+        //즉 밀리세컨즈 * 1000 = 초 * 60 = 분 * 60 = 시간 * 24 = 일 단위로 변환
+        //날짜 차이 계산
+        var betwwenDays = (now.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24; 
+        // 계산한 날짜를 페이지에 표시
+        //이제 이 값을 페이지에 표시 - text 메서드를 사용 
+        //만약 같은 날짜라면 1일째라고 나와야 하므로 +1을 더해주기!!
+        $('#day-count').text(Math.floor(betwwenDays) +1);
+        
+        //만약 시작 날짜가 제대로 입력되지 않았다면 alert창을 통해 메시지를 출력
+        //잘못된 입력일 경우 메시지 출력
+        if ($('#start').val() === '') {
+          alert("날짜를 제대로 입력해주세요.");
+        }
+      }
+    </script>
+  </body>
+</html>

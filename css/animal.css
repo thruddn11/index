@@ -1,0 +1,147 @@
+@font-face {
+    src: url("../fonts/BMJUA_ttf.ttf");
+    font-family: Jua;
+  }
+
+
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /*size -btn 설정 부분*/
+  --size-button: 60px;
+
+  /*animation 효과 설정*/
+  --animation-duration: 300ms;
+
+  /*font-size*/
+  --font-size: 18px;
+
+  /*margin-rigth/bottom/left/padding등 8px로 할거라고 설정*/
+  --base-space: 8px;
+
+  /*border-radius 부분*/
+  --size-border: 4px;
+
+  /*item_thumbnail 부분*/
+  --size-thumbnail: 50px;
+}
+
+body {
+    /* background-color: var(--color-black); */
+    display: flex; /*아이템들이 한줄에 다닥다닥 붙게된다. 
+    이거는 flex-direction: row;로되어 있어서 그런것이므로 
+    column으로 설정을 바꿔줘야함!!!*/
+
+    background-color: darkslategrey;
+
+    /*중간 정렬 위치를 설정하기 위해 작성*/
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+
+    /*위에까지 작성하고 적용이 안된다-개발자도구켜서
+    body부분의 height 값 확인해주기!!*/
+    height: 100vh;
+}
+
+.logo {
+  cursor: pointer;
+   /*커지는 효과를 300ms동안 애니메이션 효과주기*/
+
+  transition: transform var(--animation-duration) ease;
+
+  margin-bottom: 10px;
+}
+
+
+/*버튼 설정 부분*/
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+  margin-right: var(--base-space);
+
+  font-family: Jua;
+}
+
+
+/*로고,버튼 부분에 대한 마우스 오버 이벤트*/
+.btn:hover,
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+
+/*처음 이미지 버튼3개에 대한 class설정 부분임*/
+.imgBtn {
+  width: var(--size-button);
+  height: var(--size-button);
+}
+
+.colorBtn {
+  font-size: var(--font-size);
+  padding: calc(var(--base-space) * 2);
+  border-radius: var(--size-border);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+}
+
+.pink {
+  background-color: var(--color-pink);
+}
+
+
+/* background-color: salmon; 테스트 확인을 위해 작성*/
+.items {
+  width: 60%;
+  height: 60%;
+
+  /*같이작성 2줄 함께*/
+  list-style: none;
+  /* padding-left: 0; */
+  padding-left: 0;
+
+  /*전체에서 스크롤이 되도록 위해 설정
+    즉-items 전체부분만 이곳에서 스크롤되도록 설정하는 것임!!!!*/
+  overflow-y: scroll;
+}
+
+.item {
+  background-color: var(--color-white);
+
+   /*아이템 이미지와 텍스트 수평으로 정렬해주기 위해 작성!!*/
+  display: flex;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
+}
+
+.item__thumbnail {
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
+}
+
+/*아이템 설명 텍스트 설정 부분*/
+.item__description {
+  margin-left: var(--base-space);
+  font-size: var(--font-size);
+}

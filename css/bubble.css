@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-width: 992px;
+    font-family: "Helvetica";
+  }
+  
+  /* navbar네비게이션 바 */
+  .navbar {
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .navbar #logo {
+    
+    line-height: 60px;
+  }
+  .navbar #logo img { /*이미지 로고-simpleshop 글짜가 가운데 정렬을 해주기 위해서 작성*/
+    /*이거는 x를 적어두고 실행시켜 확인해보면서 작성해야함!!!*/
+    vertical-align: middle;
+  }
+  
+  .navbar #menu {
+    float: right;  /*메뉴바를 오른쪽으로 끌어오기 위해 작성*/
+    list-style: circle; /*각 메뉴들에있는 점 표시를 없애기 위해서*/
+    padding: 0;   /*한번 없애봐서 실행해보기!!*/
+    margin: 0;
+  }
+  
+  .navbar #menu li {
+    float: left;  /*각 메뉴들을 가로 일자로 배치시키기 위해서*/
+    margin-left: 50px; /*각 메뉴 사이들의 공간을 지정해준것임*/
+    line-height: 60px; /*각 메뉴들을 중앙으로 배치시키기 위해서 */
+  }
+  .navbar #menu li a { /*링크스타일 작성해주는 것임*/
+    color: #545454;
+    font-size: 15px;
+    text-decoration: none; /*밑줄없애주기*/
+    font-weight: bold;
+  }
+  
+  
+  
+
+  /* hero header  히어로 헤더 부분*/
+  .hero-header {
+    /* height: 450px;  */
+    /*세로길이 */
+
+    /*배경 이미지 설정*/
+    /* background-image: url("../images/shopping-one/gugug.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh; */
+    /* max-width: 100%;
+    width: 100%; */
+    
+    overflow: hidden;
+    background: url("../images/shopping-one/gugug.jpg")no-repeat center center;
+    background-size: contain;
+    
+  }
+
+  .hero-header img {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  /* products */
+ .products h3 {
+     font-size: 24px;
+     color: #545454;
+     margin-top: 60px;   /*마진 h3로고 위아래가 60픽셀로 나와있으므로 작성*/
+     margin-bottom: 60px;  
+     text-align: center;   /*가운데 정렬*/
+ }
+ .product-list {  /*이 부분의 가로길이를 제품이 딱 3개만들어가도록
+    길이를 설정해주면된다!!!*/
+     width: 735px;  /*왜이렇게 설정해주냐면 제품이 1개당 225픽셀인데
+     3개를 지정해줘야 하므로 225 곱하기 3해서 675픽셀로 지정해줘야함!!*/
+     /*길이 변경해주기 735로!!*/
+     margin-left: auto;  /*가운데 정렬도 시켜주기!!!*/
+     margin-right: auto;
+     
+    }
+
+
+ .product {
+     width: 225px;  /*상품들은 각각 225픽셀이라고 문제에 나와있음*/
+     text-align: center; /*안에있는 내용들은 다 가운데 정렬이 되어있으므로*/
+     display: block;   /*div태그를 a태그로 바꿔주고 문제점을 해결하는 방법
+     이방법은 강제로 a태그를 block display로 바꿔주는 방법임!!!*/
+     color: black;
+     font-weight: bold;
+     font-family: Jua;
+     text-decoration: none;  /*밑줄없애주기*/
+     float: left;  /*일자로 표시되어 나타나는 상품들의 배치를 변경시켜주기 위해서 작성!!*/
+     margin-left: 10px;
+     margin-right: 10px;  /*각 제품들 사이의 간격을(마진) 설정해주기!!!*/
+     /*근데 위의 2줄 부분 마진을 설정해주면 다시 정렬배치가 바뀌게 된다.
+     그리고 f12를 눌러 소스검사를 하여 보면은 225픽셀에 왼쪽오른쪽 각각 마진이
+     10픽셀씩 더해져 나타나게된다- 이를 해결하기 위해서  product-list부분의
+     가로길이 675를 바꿔줘야함 - 마진이 총20픽셀이 더해졌으므로
+     225 곱하기 3이아니라 20을더해준 245곱하기 3을 해준 735를 가로길이로 설정해줘야함!!*/
+     margin-bottom: 80px;  /*각 제품 밑으로 80픽셀의 여백을 주기!!!*/
+    }
+.product-name {
+    margin-top: 20px;   /*제품이름 위로는 20픽셀 아래로는 4픽셀이라고 문제에 나와있음*/
+    margin-bottom: 4px;
+  
+}    
+.clearfix {
+    clear: both; /*이내용을 작성해주어야 요소검사해보면 프로덕트랑 리스트부분의
+    세로길이가 제대로 적용이 되어 나타나게 된다!!! -확인해보기!!*/
+}
+  
+  /* footer */
+.footer {   /*각 메신저 로고이미지 부분 - footer로 묶어줬음!!*/
+    text-align: center;  /*가운데 정렬해주기!*/
+    
+}  
+.footer a {  /*각 이미지 링크사이의 간격을 20픽셀로 두기위해 또 작성!1*/
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;  /*밑줄없애주기 */
+}
+
+
+
+*{ padding: 0; margin: 0; box-sizing:border-box; } 
+body { overflow-x:hidden; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+a:visted, a:link, a:active { color:#333;  }
+img{ border: none; max-width:100%; height: auto;}
+table{ border-collapse: collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ position: absolute; left: -999em; }
+label.away{ position: absolute; left: -999em; }
+input[type=button], input[type=submit], input[type=reset],input[type=image],button, select{cursor:pointer; outline:none;}

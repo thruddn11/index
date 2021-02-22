@@ -1,0 +1,226 @@
+/*전체적인 공통 속성 설정 부분*/
+
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+  
+    /* Font size ==> rem/em으로 사용하는게좋음!!*/
+    /* --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px; */
+    --font-large: 3rem;
+    --font-medium: 1.75rem;
+    --font-regular: 1.125rem;
+    --font-small: 1rem;
+    --font-micro: 0.875rem;
+  
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+
+
+    /*Size 설정하기*/
+    --size-border-radius: 4px;
+
+  }
+
+
+
+
+@font-face {
+  src: url("../fonts/BMJUA_ttf.ttf");
+  font-family: Jua;
+}
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Jua;
+    background-color: black;
+    
+  }
+  
+  .pad {
+    width: 700px;
+    height: 670px;
+    margin: 100px auto;
+    position: relative;
+    /* width="700" height="670" */
+  }
+  
+.tv {
+    width: 700px;
+    height: 670px;
+}
+
+  .pad #play-btn {
+    position: absolute;
+    top: 280px;
+    right: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .pad #stop-btn {
+    position: absolute;
+    top: 420px;
+    right: 18px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .pad #pause-btn {
+    position: absolute;
+    top: 350px;
+    right: 18px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+
+  }
+  
+  .cell-container {
+    width: 360px;
+    height: 360px;
+    left: 170px;
+    top: 220px;
+    position: absolute;
+    
+
+
+
+    
+    
+    /* 2021년 02월 06일 토요일 작업 수정  
+    width: calc(100% - 340px);
+    height: auto;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; */
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    color: #4A4A4A;
+    font-size: 16px;
+    float: left;
+    margin: 10px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  
+  .cell .key {
+    border: 2px solid #4A4A4A;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 8px auto;
+    line-height: 40px;
+    font-weight: 500;
+  }
+  
+
+  /*각 번호에 해당하는 글씨 이름 부분 설정*/
+  .cell .instrument {
+    width: 80px;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .cell.green {
+    background-color: #87E682;
+  }
+  
+  .cell.blue {
+    background-color: #2DBAF2;
+  }
+  
+  .cell.red {
+    background-color: #FB718C;
+  }
+  .cell.purple {
+    background-color: plum;
+  }
+  
+  .cell.purple.playing {
+    background-color: rgba(135, 230, 130, 0.2);
+    color: #87E682;
+    border: 2px solid #87E682;
+  }
+  
+  .cell.purple.playing .key {
+    border: 2px solid #87E682;
+  }
+  
+  .cell.blue.playing {
+    background-color: rgba(45, 186, 242, 0.2);
+    color: #2DBAF2;
+    border: 2px solid #2DBAF2;
+  }
+  
+  .cell.blue.playing .key {
+    border: 2px solid #2DBAF2;
+  }
+  
+  .cell.red.playing {
+    background-color: rgba(251, 113, 140, 0.2);
+    color: #FB718C;
+    border: 2px solid #FB718C;
+  }
+  
+  .cell.red.playing .key {
+    border: 2px solid #FB718C;
+  }
+  
+
+
+  @media screen and (max-width: 767px) {
+    :root {
+        /* FONT-SIZE */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+    }
+    .tv {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .pad {
+      max-width: 100%;
+      height: auto;
+    }
+  }

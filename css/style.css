@@ -1,0 +1,910 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Soure Sans Pro', sans-serif; */
+
+
+/*⚽⚽⚽전체적인 공통 속성 설정 부분⚽⚽⚽*/
+
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+  
+    /* Font size ==> rem/em으로 사용하는게좋음!!*/
+    /* --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px; */
+    --font-large: 3rem;
+    --font-medium: 1.75rem;
+    --font-regular: 1.125rem;
+    --font-small: 1rem;
+    --font-micro: 0.875rem;
+  
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+
+
+    /*Size 설정하기*/
+    --size-border-radius: 4px;
+
+    /* Animation 효과 설정 공통*/
+    --animation-duration: 300ms;
+  }
+
+    
+
+/*⚽⚽⚽전체 태그에대한 설정⚽⚽⚽*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*처음 설정하기 전에 보면은 body부분에
+기본적으로 상하좌우로 margin이 8px씩 들어가있으므로
+없애주기위해 작성!!*/
+body {
+    margin: 0; 
+    font-family: 'Open Sans', sans-serif;
+    cursor: default;
+}
+
+
+/*contact me 버튼의 기본적인 속성을 없애기 위해!*/
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none; /*클릭하면아웃라인이랑 보더나오는거 없애기!*/
+    outline: none; /*아웃라인 남아있는거 없애기 위해작성*/
+}
+
+
+/*Section Common 속성 지정
+==>큰 부분(about,skills,works 등등)
+에 전체적으로 class section으로 지정해주기!!
+*/
+.section {
+    text-align: center;
+
+    /*👺👺👺👺👺👺👺👺 원래는padding값 40px이였음!!! 👺👺👺👺👺👺*/
+    padding: 60px;
+
+   /*위에까지 작성해주고 창크기 옆으로
+   늘려보면 margin이 오른쪽에만 남아있는게 보임
+   이걸 해결하기위해*/
+   margin:  auto; 
+
+
+}
+
+/*이부분(about,skills 부분에 설정) 
+설정하는거 다시!!*/
+.section_container {
+     /*최대너비 지정해주기*/
+     max-width: 1200px;
+
+     margin: auto;
+}
+
+.slow span {
+    display: inline-block;
+    margin: 0 -.075em;
+    animation: loading .9s infinite alternate;
+    color: var(--color-white);
+}
+.slow span:nth-child(2) {
+    animation-delay: .1s;
+  }
+  .slow span:nth-child(3) {
+    animation-delay: .3s;
+  }
+  .slow span:nth-child(4) {
+    animation-delay: .5s;
+  }
+  .slow span:nth-child(5) {
+    animation-delay: .7s;
+  }
+  /* slow span:nth-child(6) {
+    animation-delay: .5s;
+  }
+  slow span:nth-child(7) {
+    animation-delay: .6s;
+  } */
+  @keyframes loading {
+    0% {
+      /* opacity: 1;*/
+      transform: scale(1);
+    }
+    100% {
+      /* opacity: 0; */
+      transform: scale(0.8);
+    }
+  }
+
+
+/* Typography - h,p 태그에 대한 속성 설정 부분*/
+
+h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0px; /*위아래는 16 , 양옆은 x*/
+  }
+  
+  h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+  }
+  
+  h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+  }
+  
+  p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 4px 0;
+  }
+
+
+
+  /*✅✅✅CSS 본격적인 스타일링 시작부분✅✅✅*/
+  #home img{
+    /* width: 40%;
+    height: 40%; */
+    /* top: -40px;
+    position: relative; */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+
+/*개발자 도구보면 기본적으로 padding값이
+40으로 설정되어 있으므로 없애주기 위해 작성*/
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+  
+  /*💮💮💮💮💮💮(1) - Navbar 부분 💮💮💮💮💮💮*/
+#navbar {
+    /*간격떨어져있도록 중심축으로 정렬*/
+    display: flex;
+    justify-content: space-between;
+
+    /* background-color: var(--color-pink); */
+    
+
+    /* 자바스크립트 기능 입히기 위해 밑에 3줄 작성!! 
+    navbar를 처음home 화면에서는 투명하게 해놓고
+    스크롤바를 내리면 다시 핑크색으로 변하도록 하는 기능을 
+    추가할 것임!!!!*/
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    
+
+    /*이제 박스들을 수직으로 중간에 정렬하기위해
+    현재-지금 중심은 수평적이고 수직은 반대이므로
+    반대로 정렬할 때에는 align-items를 center로 설정해주면 된다.!!*/
+    align-items: center;
+
+    color: var(--color-white);
+
+    /*navbar 글자들을 조금 안쪽으로 넣어주기 위해 작성!*/
+    padding: 16px;
+
+
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
+}
+
+/*navbar 이면서 navbar가 dark일 때*/
+#navbar.navbar--dark {
+    /* background-color: var(--color-pink); */
+    background-color: skyblue;
+    padding: 8px;
+}
+
+/*다음으로 이제 navbar메뉴를 플렉스박스로 
+만들어서 한줄로 정렬하기*/
+.navbar_menu {
+    display: flex;
+}
+
+/*로고 폰트크기 */
+.navbar_logo {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    /* color: var(--color-light-grey); */
+    color: var(--color-black);
+}
+
+/*간격 띄워주기 -home,about이런 6개메뉴들 부분!*/
+.navbar_menu_item {
+    padding: 8px 12px;  
+    /* 양옆8 위아래12 */
+
+    margin: 0 4px;
+    cursor: pointer;
+
+/*밑에 2부분에공통 속성이므로 그냥 여기에 1번만 적어주기!*/
+    border-radius: var(--size-border-radius);
+    border: 1px solid transparent;
+
+    /* 메뉴 후버 애니메이션 적용 */
+    transition: all 0.7s ease-in-out;
+}
+
+/* 12월02일 기능추가 */
+.navbar_menu_item.active {
+    border: 1px solid var(--color-white);
+}
+
+/*active적어놓은 부분들에 대한 설정!*/
+/* .navbar_menu_item.active {
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+
+} */
+
+.navbar_menu_item:hover {
+    border: 1px solid var(--color-white);
+    background-color: var(--color-dark-pink);
+    border-radius: var(--size-border-radius);
+}
+
+
+
+
+/* 
+반응형 - 햄버거 토글 버튼 설정 부분! ! ! !  
+*/
+.navbar_toggle-btn {
+    /*기존 자리에서 빠져나와서 포지션이 되는 것은
+    absolute를 이용해야 함!!*/
+    position: absolute;
+    right: 32px;
+    top: 24px;
+
+    /*반응형 사이즈가 될때만 보여야 하므로 평소에는 보이지 않게 설정!!*/
+    display: none;
+
+    font-size: 24px;
+    color: var(--color-white);
+}
+
+
+
+
+/*💮💮💮💮💮💮(2) Home 설정 부분!!! 💮💮💮💮💮💮*/
+
+/*이미지에 대한 설정 여러가지 한줄에 한번에 작성했음!!
+center에 두면서 cover -->반응형으로 되도록!
+no-repeat ==> 이미지 반복 등장 x 
+*/
+#home {
+    background: url("../images/home-background14.jpg") center/cover no-repeat;
+
+    /*home부분전체 위치 맞추기위해 작성*/
+    padding: 40px;
+
+    /*모든 item들을 중간으로 정렬하기 위해!
+    text-align은 블럭요소나 테이블 셀에서사용 가능!!!*/
+    text-align: center;
+
+    padding-top: 120px;
+}
+
+
+.home_avatar {
+    /*강아지 홈 사진 크기높이 조정*/
+    width: 250px;
+    height: 250px;
+
+    /*동그랗게 만들기 위해*/
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+.home_title,
+.home_description {
+    color: var(--color-white);    
+}
+
+.home_contact {
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: (var(--weight-semi-bold));
+    
+    /*위치 너비 조정*/
+    margin: 24px;
+    padding: 8px 12px;
+
+    /*contact me 버튼의 테두리 및 윤곽*/
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+
+    transition: all 0.7s ease-in-out;
+}
+
+.home_contact:hover {
+    background-color: var(--color-orange);
+}
+
+
+
+/*💮💮💮💮💮💮(3) About 부분 설정하기!!! 💮💮💮💮💮💮*/
+
+/*first-stage ~ last 요소 한줄에 정렬하기*/
+.about_majors {
+    display: flex;
+
+    /*그리고 이 3개를 각각 
+    중간중간에 스페이싱을넣어야 하므로*/
+    justify-content: space-between;
+
+    /*너무 위아래로 붙어 있으므로 margin설정*/
+    margin: 80px 0;   
+}
+
+
+.major_icon {
+    width: 170px;
+    height: 170px;
+
+    font-size: 70px;
+    /*높이만큼 같은 값을 주면 중간 수직 정렬 */
+    line-height: 170px;
+    /*임시적으로 확인하기 위해 색지정하기!!*/
+    /* background-color: yellow; */
+
+    /*이부분도 개발도구켜서보면 margin이 오른쪽에만 있다!*/
+    margin: auto;
+
+    border: 1px solid var(--color-blue);
+    border-radius: 50%;
+    margin-bottom: 16px; /*원래 내가 설정한거에서는 16*/
+
+    color: var(--color-blue);
+    /* cursor: pointer; */
+}
+
+/*재미있는 효과 추가하기
+->아이콘 동그라미 포함 전체부분에 마우스 hover했을 때
+효과를 넣기위해 작성한다고 설정*/
+.major_icon:hover i {
+    color: var(--color-pink);
+    transform: rotate(-30deg) scale(1.1);
+}
+.major_icon i {
+    transition: all var(--animation-duration) ease;
+}
+
+
+.major_title, 
+.major_description {
+    color: var(--color-dark-grey);
+    /* margin: 20px; 
+    가위 바위 보 모양부분쪽에 텍스트 간격 주기위해 margin 값 적용
+    0000 ---> 내가 따로 작성한 내용 부분임!!!
+    */
+}
+
+.major_description {
+    font-size: var(--font-small);
+}
+
+/*가운데 정렬 및 위치 조정*/
+.job {
+    display: flex;
+    align-items: center;
+}
+.job_description {
+    margin: 0 16px;
+    text-align: left;
+}
+
+.job_name, 
+.job_period {
+    color: var(--color-light-grey);
+}
+
+.job_name {
+    font-size: var(--font-small);
+}
+.job_period {
+    font-size: var(--font-micro);
+}
+
+.job .first {
+    /* width: 21%;
+    height: 21%; */
+    /* width: 20%;
+    height: 20%; */
+}
+
+
+
+
+
+/*💮💮💮💮💮💮(4) Skills 설정 부분💮💮💮💮💮💮
+skillset_left 
+skillset_right => tools와 etc
+*/
+
+#skills {
+    /* background-color: var(--color-yellow); */
+    /* background-color: aliceblue; */
+    background-color: lavender;
+}
+
+.skillset {
+    display: flex;
+    /*배경색(01)*/
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+
+    margin: 20px 0;
+}
+/*윗줄까지 작성하고 보면은 skills와tools 부분이
+위치가 정렬되지 않게 되어있는것을 볼 수 있음
+저 2개의 너비는 개발도구보면 100%이지만
+늘어나지 않는것은 컨텐츠 자체가 작아서 그럼
+그러므로 아이템들의 크기가 자동적으로 늘어나게하기위해서는
+flex-basis를 설정해주어야함!!!*/
+
+.skillset_title {
+    color: var(--color-white);
+}
+
+/*2개부분 너비 합쳐서 100%맞춰야함!*/
+.skillset_left {
+    flex-basis: 60%;
+    /* 배경색(02) */
+    background-color: var(--color-dark-grey);
+
+    padding: 20px 40px;
+}
+.skillset_right {
+    flex-basis: 40%;
+}
+
+.tools {
+    /* 배경색(03) */
+    background-color: var(--color-grey);
+}
+.tools, .etc {
+    padding: 20px;
+}
+
+/* 8개 description있음 */
+.skill_description {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.skill {
+    margin-bottom: 32px;
+}
+
+.skill_bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+    /* margin: 10px; */
+}
+
+.skill_value {
+    /* width: 50%; */
+    height: 3px;
+    background-color: var(--color-orange);
+}
+
+
+
+/* 💮💮💮💮💮💮(5) Works 설정 부분! ! !💮💮💮💮💮💮  */
+/* 먼저 4개의 버튼 설정 */
+.category_btn {
+    border: 1px solid var(--color-dark-grey);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+
+
+    position: relative;
+}
+
+.work_categories {
+    margin: 40px;
+}
+
+/*.category_btn.active를 .category_btn.selected로 바꿔주기!!  */
+.category_btn.selected,
+.category_btn:hover {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+
+.category_count {
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+
+    /*위내용 적어주어도 동그라미모양이 이상함
+    그래서 inline-block 설정해주기 --> span태그랑 관련!!*/
+    display: inline-block;
+    line-height: 24px;
+
+    /*효과추가 - 밑에 코드 부분이랑 + 엮기!*/
+    /* 이 position이 relative로 되어있어서 위치가 이상한것이므로 
+    이부분을 absolute로 바꿔주기! */
+    /* position: relative; */
+    /* 그리고 category_btn 부분의 position을 relative로 새로 작성해주기!! */
+    position: absolute;
+
+    top: -20px;
+    /* left: 4px; */
+    right: 16px;
+    opacity: 0;
+
+    transition: all var(--animation-duration) ease-in;
+}
+
+/*카테고리btn이 actvie인 상태의 카테고리 count와
+  카테고리btn이 마우스가hover 일 때 안에 있는 카테고리 count 일때만!! 
+*/
+
+/*.category_btn.active를 .category_btn.selected로 바꿔주기!!  */
+.category_btn.selected .category_count,
+.category_btn:hover .category_count {
+    opacity: 1;
+    /* top: 0; */
+    top: 5px;
+}
+
+
+/*프로젝트들 꾸미는 부분!*/
+.work_projects {
+    display: flex;
+
+    /*아이템들이 꽉차면 자동으로 줄바꿈
+    할 수 있도록 해주는 설정 
+    flex-wrap을 이제 맵핑하라고 하는 말임 */
+    flex-wrap: wrap;
+
+    /*모두 중간으로 정렬!*/
+    justify-content: center;
+
+    opacity: 1;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+/* js 코드에 ani-out이라는 클래스를 추가작성을 먼저한 후에
+그다음에 css에 적어주는 습관으로 작성하기!! */
+.work_projects.ani-out {
+    /* opacity: 0.6; */
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+}
+
+/*이 project 클래스는 a태그에 있는 class인데
+이 a태그 안에 project_img와 project_description클래스
+들이 포함되어있음!!!*/
+.project {
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    /*임의로 지정 - 확인 용도로*/
+    background-color: var(--color-light-white);
+
+
+    /*description부분 포지션을 지정한후 
+    여기도 포지션을 지정해줘야 함! 부모는 position이므로!*/
+    position: relative;
+
+    /*프로젝트이미지들이 중간정렬이 안되어 있으므로
+    3가지 옵션지정!!!*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    /*프로젝트8개부분의 화면이 자동으로
+    자연스럽게 매꿔지도록 설정해주는 속성!!*/
+    flex-grow: 1;
+}
+
+.project.invisible {
+    display: none;
+}
+
+.project_img {
+    max-width: 100%;
+    max-height: 100%;
+}
+/* .project_img.go {
+    width: 500px;
+} */
+
+
+.project_description {
+    /*위치를 absolute로 지정하게되면
+    어디로 옮겨야 할지 속성들을 적어주어야 함!!!*/
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: black;
+    width: 100%;
+    height: 100%;
+
+    /*설명부분들 가운데 정렬3가지 옵션*/
+    display: flex;
+    /*속성 기능 다시 찾아서 정리  */
+    flex-direction: column;
+    /*반대 방향으로 정리할 센터를 지정해야하므로 */
+    justify-content: center;
+
+    /*마우스 애니메이션 지정!!!*/
+    opacity: 0;
+    transition: all var(--animation-duration) ease-in;
+
+    /*추가 애니메이션
+    원래는 조금 10px 정도 밑으로 내려놨다가
+    */
+    transform: translateY(20px);
+}
+
+/*프로젝트에 마우스가 올라오면 그안에 있는
+프로젝트 description에 있는 것들의 opacity를바꾸기
+*/
+.project:hover .project_description {   
+    opacity: 0.8;
+
+    /*마우스가 올라오면 다시 얘네를
+    원래 포지션으로 가져오기 -> 이때는 0px으로 설정!*/
+    transform: translateY(0px);
+}
+
+
+
+.project_description h3 {
+    /* color: var(--color-white); */
+    color: var(--color-orange);
+}
+
+
+/*h3다음부분에 설정하는 것임*/
+.project_description h3::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-dark-white);
+
+    display: block;
+    position: relative;
+    left: 50%;
+
+    transform: translateX(-50%);
+    /* margin-left: -40px; */
+    margin-top: 8px;
+}
+
+
+
+
+
+/*💮💮💮💮💮💮 (6) Testimonial 부분 ! ! ! 💮💮💮💮💮💮*/
+/* Testimonial */
+#aim {
+    /* background-color: var(--color-light-white); */
+    background-color: aliceblue;
+}
+
+.testimonials {
+    margin: 40px;
+}
+
+.testimonial {
+    display: flex;
+    margin: 32px 0;
+}
+
+
+/*남자 사진 이미지 부분!*/
+.testimonial_avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+ 
+.testimonial_speech-bubble {
+    padding: 10px;
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+
+/*남자사진 이미지 1,2번에 대한 각각 설정
+nth-child()속성 이용==> 양옆의 쓸데없는 공간
+없애기 위해 작성함!!!*/
+.testimonial_avatar:nth-child(odd) {
+    margin-right: 40px;
+}
+
+.testimonial_avatar:nth-child(even) {
+    margin-left: 40px;
+}
+
+.testimonial_speech-bubble p {
+    color: var(--color-light-grey);
+}
+
+.testimonial_speech-bubble a {
+    color: var(--color-pink);
+    cursor: default;
+}
+
+
+
+/* 💮💮💮💮💮💮(7)Contact 부분 - 마지막 설정 부분임!!!! 💮💮💮💮💮💮*/
+/* Contact */
+
+#contact {
+    /* background-color: var(--color-pink); */
+    background-color: skyblue;
+}
+
+/* .contact_title, */
+.contact-tel, 
+.contact_email,
+.contact_rights {
+    color: var(--color-white);
+}
+
+.contact_title {
+    margin: 32px;
+}
+
+.contact_links {
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+
+.contact_links i:hover {
+    transform: scale(1.1);
+    color: var(--color-yellow);
+    transition: all var(--animation-duration) ease-in;
+}
+
+
+/*💮💮💮💮💮💮Arrow up 버튼 설정💮💮💮💮💮💮 */
+/* Scroll */
+.arrow-up {
+    /* 우선 포지션을 fixed로 설정 */
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 50px;
+
+    width: 70px;
+    height: 70px;
+
+    background-color: var(--color-pink);
+    color: var(--color-white);
+    border-radius: 50%;
+
+    /* display: none; */
+    opacity: 0;
+
+    /* 애니메이션 효과주기 - 근데 display 속성이랑 같이적으면 적용이안된다!!! 
+    그러므로 윗줄이랑 아랫부분 display 작성한거 지우고 opacity로 따로 작성하고
+    transition속성에서 all말고 opacity만 적용하도록 작성하기!!*/
+    transition: opacity 300ms ease-in;
+
+    /* 이거 적어주면 클릭 못하게 해줌-여기다 적어줘야함! */
+    pointer-events: none; 
+}
+
+/* 이제 이부분 js파일에서 작성 */
+.arrow-up.visible {
+    /* display: block; */
+    opacity: 1;
+
+    /* 보일 때에는 클릭 하도록 해야하므로!! */
+    pointer-events: auto; 
+}
+
+
+
+
+
+
+
+/* 
+💮💮💮💮💮 CSS 반응형 단계!!! 💮💮💮💮💮💮
+
+*/
+
+
+
+
+/* 마우스 스크롤 적용 부분 설정 (1)번 스타일 부분 */
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: black;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+
+/* fittext3 css --- 안녕하세요 글씨 부분*/
+#home .slow {
+    /* background: rgba(0,0,0,0.1); */
+			text-align: center;
+			color:#fff;
+			font: 55px/1 "Impact";
+			text-transform: uppercase;
+			display: block;
+			text-shadow:#253e45 -1px 1px 0,
+			#253e45 -2px 2px 0,
+			#d45848 -3px 3px 0,
+			#d45848 -4px 4px 0;
+			margin: 5% auto 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

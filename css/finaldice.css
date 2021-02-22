@@ -1,0 +1,327 @@
+@font-face {
+    
+    src: url(../fonts/NanumGothic-Bold.woff);
+    src: url(../fonts/NotoSans-Bold.woff);
+    font-family: NanumGothic-Bold;
+    font-family: NotoSans-Bold;
+  
+}
+
+
+body {
+    position: fixed;
+    margin: 0;
+}
+
+#wrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1280px;
+    height: 800px;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    overflow: hidden;
+}
+
+
+.diceDspBox {
+    position: absolute;
+}
+
+.diceDspBox.one {
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.diceDspBox.two {
+    top: 120px;
+    right: 230px;
+    bottom: 120px;
+    left: 230px;
+}
+
+
+.diceDsp {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.diceDsp.zero {
+    bottom: -550px;
+    left: 466px;
+}
+
+/*  주사위 왼쪽 그림 부분 - 1번 주사위  */
+.diceDsp.one {
+    top: 330px;
+    right: -580px;
+}
+
+/*  주사위 오른쪽 그림 부분 - 2번째 주사위  */
+.diceDsp.two {
+    bottom: -460px;
+    left: 700px;
+}
+
+
+.diceAni {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+.diceImg {
+    position: absolute;
+    display: none;
+    top: 47px;
+    left: 48px;
+    width: 246px;
+    height: 246px;
+    background: url("../images/DicePlay/ddic.png") no-repeat;
+}
+
+.rollingDiceBtn {
+    position: relative;
+    width: 353px;
+    height: 108px;
+    bottom: -670px;
+    left: 463.5px;
+    background: url("../images/DicePlay/result.png") -380px 0 no-repeat;
+    color: white;
+    text-align: center;
+    text-shadow: #000 0px 0 3px;
+    font-family: NanumGothic-Bold;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 108px;
+    cursor: pointer;
+    
+
+    transition: transform .0.6s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.rollingDiceBtn :active {
+    color: #4cb3df;
+    cursor: pointer;
+}
+
+.rollingDiceBtn:hover {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+}
+
+.rollingDiceBtn.clicked {
+    background-position-x: -733px;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.diceCntSelectBox {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 282px;
+    height: 172px;
+    background: url("../images/DicePlay/count.png") no-repeat;
+}
+
+
+.diceCntSelectBox_title {
+    position: absolute;
+    top: 13px;
+    left: 126px;
+    color: #9a3401;
+    font-size: 28px;
+    font-family: NanumGothic-Bold;
+    font-weight: bold;
+ 
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: default;
+}
+
+.diceCtnSelectBtn {
+    position: absolute;
+    bottom: 13px;
+    width: 99px;
+    height: 96px;
+    background: url("../images/DicePlay/result.png") 0 0 no-repeat;
+    cursor: pointer;
+    left: 30px;
+}
+
+
+.diceCntSelectBox .diceCtnSelectBtn.one {
+    left: 30px;
+    background-position-x: -93px;
+    border: white;
+    transition: transform .0.6s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.diceCntSelectBox .diceCtnSelectBtn.two {
+    left: 128px;
+    border: white;
+    background-position-x: -188px;
+    transition: transform .0.6s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+
+.diceCntSelectBox .diceCtnSelectBtn.two:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+.diceCntSelectBox .diceCtnSelectBtn.onee {
+    left: 30px;
+    background-position-x: 1px;
+    transition: transform .0.6s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.diceCntSelectBox .diceCtnSelectBtn.twoo {
+    left: 128px;
+    border: white;
+    background-position-x: -283px;
+    transition: transform .0.6s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+.diceCntSelectBox .diceCtnSelectBtn.onee:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.totalNoBox {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    width: 227px;
+    height: 255px;
+    background: url("../images/DicePlay/total.png") no-repeat;
+    max-width: 100%;
+    cursor: default;
+    font-family: NotoSans-Bold;
+}
+
+.totalNoBox_circle {
+    position: absolute;
+    bottom: 29px;
+    left: 27px;
+    width: 169px;
+    height: 169px;
+    background: url("../images/DicePlay/circle.png") no-repeat;
+    color: white;
+    text-align: center;
+    text-shadow: #000 0px 0 3px;
+
+}
+
+.totalNoBox_circle_title {
+    margin-left: 0px;
+    font-size: 35px;
+    font-family: NotoSans-Bold;
+    margin-top: 25px;
+    cursor: default;
+}
+
+.totalNo {
+    box-sizing: border-box;
+    padding-right: .1em;
+    font-size: 90px;
+    letter-spacing: -0.1em;
+    margin-top: -56px;
+}
+
+
+.wrap-bottom {
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    background: url("../images/DicePlay/wrap.png") no-repeat;
+    overflow: hidden;
+}
+
+
+.bgContainer_bottom {
+    position: absolute;
+    top: 712px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #4cb3df;
+    
+}
+
+.bgContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.bgContainer_top {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+
+.bg{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1280px;
+    height: 800px;
+    background: center top url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU3MEY3NTg0ODMzQzExRTg5N0UxRTU2RjkyMjE2RDZFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU3MEY3NTg1ODMzQzExRTg5N0UxRTU2RjkyMjE2RDZFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTcwRjc1ODI4MzNDMTFFODk3RTFFNTZGOTIyMTZENkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTcwRjc1ODM4MzNDMTFFODk3RTFFNTZGOTIyMTZENkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4BE+ONAAAASElEQVR42mL8++8fAyng7fffQJKZkYGFiZGRJJ0Q9UyMDEwM5IJRnaM6R5ZOlg8/fpOk4fPPP5BcxvL3P2lWQdT/p8S1AAEGAC5rENgygm7sAAAAAElFTkSuQmCC);
+    z-index: -1;
+}

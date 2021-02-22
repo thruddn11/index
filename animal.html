@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="./css/animal.css" />
+    <script src="./js/animal/animal.js" defer></script>
+  </head>
+  <body>
+     <!--Logo 부분-->
+    <img src="./images/shopping-two/logo01.png" alt="Logo" class="logo" />
+
+    
+    <!--Buttons 부분==총 6개의 버튼-->
+    <!--처음 3개 버튼은 이미지 옷 버튼-->
+    <section class="buttons">
+      <button class="btn">
+        <img
+          src="./images/shopping-two/Big.png"
+          alt="tshirt"
+          class="imgBtn"
+          data-key="type"
+          data-value="Large"
+        />
+      </button>
+      <button class="btn">
+        <img
+          src="./images/shopping-two/Middle.jpg"
+          alt="pants"
+          class="imgBtn"
+          data-key="type"
+          data-value="Middle"
+        />
+      </button>
+      <button class="btn">
+        <img
+          src="./images/shopping-two/Tiny.jpg"
+          alt="skirt"
+          class="imgBtn"
+          data-key="type"
+          data-value="Tiny"
+        />
+      </button>
+      <button class="btn colorBtn blue" data-key="pattern" data-value="predator">
+        육식동물
+      </button>
+      <button class="btn colorBtn yellow" data-key="pattern" data-value="kind">
+        초식동물
+      </button>
+      <button class="btn colorBtn pink" data-key="pattern" data-value="bird">
+        조류
+      </button>
+    </section>
+
+     <!--Items 목록부분-->
+    <ul class="items"></ul>
+  </body>
+</html>

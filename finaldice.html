@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>final Dice project</title>
+    <link rel="stylesheet" href="css/finaldice.css">
+</head>
+
+<body class="body">
+    <div id="wrap">
+        <div class='bg'></div>
+        <div class='wrap-bottom'></div>
+        <div  class="bgContainer">
+            <div class="bgContainer_top"></div>
+            <!-- <div class="bgContainer_right"></div> -->
+            <div class="bgContainer_bottom"></div>
+        </div>
+
+
+        <div id="page1">
+            <div  class="diceCntSelectBox">
+                <p class="diceCntSelectBox_title">주사위 개수</p>
+                <div class="diceCtnSelectBtn one"></div>
+                <div class="diceCtnSelectBtn two"></div>
+            </div>
+            <div  class="totalNoBox">
+                <div class="totalNoBox_circle">
+                    <p class="totalNoBox_circle_title">Total</p>
+                    <p class="totalNo">1</p>
+                </div>
+            </div>
+            <div  class="diceDspBox">
+                <div class="diceDsp zero">
+                    <img class="diceAni" src="./images/DicePlay/01.png" alt="">
+                    <div class="diceImg zero"></div>
+                </div>
+            </div>
+            <div class="rollingDiceBtn">주사위 던지기</div>
+        </div>
+
+        <div id="page2">
+            <div class="diceCntSelectBox">
+                <p class="diceCntSelectBox_title">주사위 개수</p>
+                <div class="diceCtnSelectBtn onee"></div>
+                <div class="diceCtnSelectBtn twoo"></div>
+            </div>
+            <div  class="totalNoBox">
+                <div class="totalNoBox_circle">
+                    <p class="totalNoBox_circle_title">Total</p>
+                    <p class="totalNo">2</p>
+                </div>
+            </div>
+            <div  class="diceDspBox">
+                <div class="diceDsp one">
+                    <img class="diceAni" src="./images/DicePlay/01.png" alt="">
+                    <div class="diceImg one"></div>
+                </div>
+                <div class="diceDsp two">
+                    <img class="diceAni" src="./images/DicePlay/01.png" alt="">
+                    <div class="diceImg two"></div>
+                </div>
+            </div>
+            <div class="rollingDiceBtn">주사위 던지기</div>
+        </div>
+    </div>
+    <script src="./js/dicejs/jquery-1.12.4.min.js" defer></script>
+    <script src="./js/dicejs/finaldice.js" defer></script>
+    <script src="./js/dicejs/common.js" defer></script>
+    <script src="./js/dicejs/setrootscale.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Mobile</title>
+    <link defer rel="stylesheet" href="./css/youtube.css">
+    <link href = "https://fonts.googleapis.com/css2? family = Source + Sans + Pro : wght @ 600 & display = swap">
+
+    <!--폰트어썸 cdn-->
+    <script src="https://kit.fontawesome.com/cc982bbf97.js" crossorigin="anonymous">
+    </script>
+    <script src="./js/youtube.js" defer></script>
+</head>
+<body>
+    <!--헤더부분 제일 맨윗부분-->
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span class="title">Yoututu</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
+
+
+
+
+    <!--비디오 플레이어 설정 부분-->
+    <!--1번-->
+    <section class="player">
+        <video controls src="./video/muhan.mp4"></video>
+    </section>
+
+    <!--2번-->
+    <section class="info">
+        <!--Metadata 설정 부분-->
+        <div class="metadata">
+            <!--2-(1)-->
+            <ul class="hashtags">
+                <li>#Sogalnara</li>
+                <li>#Somalia</li>
+                <li>#Sogogiya</li>
+            </ul>
+            <!--2-(2)-->
+            <div class="titleAndButton">
+                <span class="title clamp">
+                    소경우와 함께하는 Youtube 기본동영상 page 만들기 프로젝트 
+                    | 프론트엔드 개발을 위한 가장 준비 단계 - 클론코딩으로 실습 및 연습
+                    <br>이건 너무어려워서 할 수가 없다구....
+                </span>
+                <button class="moreBtn">
+                    <i class="fas fa-caret-square-up"></i>
+                </button>
+            </div>
+            <!--2-(3)-->
+           
+                <span class="views">10000 views 1 month agp</span>
+           
+        </div>
+
+        <!--Actions 설정 부분-->
+        <ul class="actions">
+            <li>
+                <button><i class="active fas fa-thumbs-up"></i><span>1000k</span></button>
+            </li>
+            
+            <li>
+                <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+            </li>
+            
+            <li>
+                <button><i class="fas fa-share"></i><span>Share</span></button>
+            </li>
+            
+            <li>
+                <button><i class="fas fa-plus"></i><span>Save</span></button>
+            </li>
+            
+            <li>
+                <button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button>
+            </li>
+        </ul>
+
+        <!--채널 정보 설정 부분-->
+        <div class="channel">
+            <div class="metadata">
+                <img src="./images/youtube-page/sp.jpg" alt="" />
+                <div class="info">
+                    <span class="name">포트폴리오 준비 연습</span>
+                    <span class="subscribers">1M subscribers</span>
+                </div>
+            </div>
+            <button class="subscribe">subscribe</button>
+        </div>
+    </section>
+
+    <!--3번:마지막 단계-->
+    <section class="upNext">
+        <span class="title">Up next</span>
+        <ul>
+            <li class="item">
+               <div class="img"><img src="./images/youtube-page/mu.webp" alt=""></div>
+                <div class="info">
+                    <span class="title">소경우 코딩 프론트엔드 연습, 포트폴리오 준비를위해
+                        마음껏 연습하고 하나하나 계속 반복합습!
+                    </span>
+                    <span class="name">포트폴리오 강의 연습</span>
+                    <span class="views">82k views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+            </li>
+            <li class="item">
+                <div class="img"><img src="./images/youtube-page/god.webp" alt=""></div>
+                <div class="info">
+                    <span class="title">소갈나라 코딩 프론트엔드 연습, 포트폴리오 준비를위해
+                        마음껏 연습하고 하나하나 계속 반복합습!
+                    </span>
+                    <span class="name">포트폴리오 강의 연습</span>
+                    <span class="views">82k views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+            </li>
+            <li class="item">
+                <div class="img"><img src="./images/youtube-page/mo.webp" alt=""></div>
+                <div class="info">
+                    <span class="title">소갈나라 코딩 프론트엔드 연습, 포트폴리오 준비를위해
+                        마음껏 연습하고 하나하나 계속 반복합습!
+                    </span>
+                    <span class="name">포트폴리오 연습</span>
+                    <span class="views">82k views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+            </li>
+        </ul>
+    </section>
+
+    <div class="infoAndUpNext">
+
+    </div>
+</body>
+</html>

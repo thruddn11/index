@@ -1,0 +1,173 @@
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size ==> rem/em으로 사용하는게좋음!!*/
+  /* --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px; */
+  --font-large: 3rem;
+  --font-medium: 1.75rem;
+  --font-regular: 1.125rem;
+  --font-small: 1rem;
+  --font-micro: 0.875rem;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+
+  /*Size 설정하기*/
+  --size-border-radius: 4px;
+
+  /* Animation 효과 설정 공통*/
+  --animation-duration: 300ms;
+}
+
+
+/*반응형으로 바꿔주기 설정 부분
+화면이 768px보다 작을때 !*/
+@media screen and (max-width: 768px) {
+  :root {
+      /* FONT-SIZE */
+  --font-large: 30px;
+  --font-medium: 18px;
+  --font-regular: 16px;
+  --font-small: 14px;
+  --font-micro: 12px;
+  }
+
+  /* 햄버거 토글 버튼 설정 하기 - 최종점검 */
+  .navbar_toggle-btn {
+      display: block;
+      top: 16px;
+      right: 16px;
+      font-size: var(--font-medium);
+  }
+
+  /*위 사이즈일 때 위아래 바꿔주기 위해서 작성*/
+  #navbar {
+      flex-direction: column;
+      
+      /*이름 설정 부분은 왼쪽으로 정렬해주기 위해*/
+      align-items: flex-start;
+
+      background-color: var(--color-pink);
+  }
+
+  /* js코드에 dark 설정해놓은 부분 있음!!! */
+  #navbar.navbar--dark {
+      padding: 16px;
+  }
+
+  /*메뉴도 세로로 한줄로 정렬하기 위해 작성*/
+  .navbar_menu {
+      flex-direction: column;
+
+      /*중앙정렬*/
+      text-align: center;
+
+      /*위에까지 작성하면 정렬이 안된다 - why? ==> navbar 메뉴
+      자체 너비가 너무 작아서 그런것임!!!*/
+      width: 100%;
+      display: none;
+  }
+  .navbar_menu.open {
+      display: block;
+  }
+
+
+  /*About 설정 부분*/
+  .about_majors {
+      flex-direction: column;
+
+      margin-top: 30px;
+      margin-bottom: 0px;
+  }
+
+  .major {
+      margin-bottom: 30px;
+  }
+
+
+  /*Skills 부분*/
+  .skillset {
+      flex-direction: column;
+  }
+
+  /* my-works프로젝트들 너비값 조정 */
+  .category_btn {
+      /* padding: 8px; */
+      margin: 4px 0;
+
+      /* 내가 추가로 다른내용을 넣고 싶으면 바로 밑에 줄 코드 작성!!! */
+      width: 100%;
+  }
+
+  .section {
+      padding: 16px;
+      padding-top: 40px;
+  }
+
+  /*아바타 남자사진 2개부분 설정*/
+  .testimonial_avatar {
+      width: 120px;
+      height: 120px;
+
+      /* margin-bottom: 8px;  
+      이거 적어도 설정 안된다-개발자 도구 켜서 보면
+      적용이 다른곳에 중심으로 되어있음 - 그부분이 odd,even적어준곳에 되어있으므로
+      이 코드를 그 부분에 적어주어야 함!!*/
+  }
+  .testimonial {
+      flex-direction: column;
+
+      /*아바타 사진을 수평축에서 center로 만들고 
+      싶고 중간에 위치시키고 싶으므로*/
+      align-items: center;
+
+  }
+
+  /* 아바타가 먼저나오고 speech-bubble이 다음에 나오도록 order값설정! */
+  .testimonial_speech-bubble {
+      order: 1;
+  }
+
+  /* avatar가 짝수-즉 2번째 아바타일 때 margin값 지정 */
+  .testimonial_avatar:nth-child(even),
+  .testimonial_avatar:nth-child(odd) {
+      margin: 0;
+      margin-bottom: 8px;
+  }
+
+  .arrow-up {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      line-height: 50px;
+      right: 16px;
+      bottom: 16px;
+  }
+
+
+}
+
+@media screen and (max-width: 520px) {
+  .project {
+    height: 100%;
+  }
+}

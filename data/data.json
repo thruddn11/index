@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "type": "Tiny",
+      "name": "Owl",
+      "size": "small",
+      "pattern": "bird",
+      "image": "./images/shopping-two/bird01.png"
+    },
+    {
+      "type": "Large",
+      "name": "Tiger",
+      "size": "Big",
+      "pattern": "predator",
+      "image": "./images/shopping-two/blue01.jpg"
+    },
+    {
+      "type": "Tiny",
+      "name": "Tuttle",
+      "size": "small",
+      "pattern": "kind",
+      "image": "./images/shopping-two/yellow01.png"
+    },
+    {
+      "type": "Large",
+      "name": "Rhinoceros",
+      "size": "Big",
+      "pattern": "kind",
+      "image": "./images/shopping-two/yellow02.png"
+    },
+    {
+      "type": "Middle",
+      "name": "Fox",
+      "size": "Medium",
+      "pattern": "predator",
+      "image": "./images/shopping-two/blue02.jpg"
+    },
+    {
+      "type": "Large",
+      "name": "Lion",
+      "size": "Big",
+      "pattern": "predator",
+      "image": "./images/shopping-two/blue03.png"
+    },
+    {
+      "type": "Large",
+      "name": "Elephant",
+      "size": "Big",
+      "pattern": "kind",
+      "image": "./images/shopping-two/yellow03.png"
+    },
+    {
+      "type": "Middle",
+      "name": "Eagle",
+      "size": "Medium",
+      "pattern": "bird",
+      "image": "./images/shopping-two/bird02.png"
+    },
+    {
+      "type": "Tiny",
+      "name": "Toco Toucan",
+      "size": "small",
+      "pattern": "bird",
+      "image": "./images/shopping-two/bird03.png"
+    },
+    {
+      "type": "Large",
+      "name": "Bear",
+      "size": "Big",
+      "pattern": "predator",
+      "image": "./images/shopping-two/blue04.png"
+    },
+    {
+      "type": "Middle",
+      "name": "Sheep",
+      "size": "Medium",
+      "pattern": "kind",
+      "image": "./images/shopping-two/yellow04.png"
+    },
+    {
+      "type": "Large",
+      "name": "Panda",
+      "size": "Big",
+      "pattern": "kind",
+      "image": "./images/shopping-two/yellow05.png"
+    },
+    {
+      "type": "Large",
+      "name": "Jaguar",
+      "size": "Big",
+      "pattern": "predator",
+      "image": "./images/shopping-two/blue05.png"
+    },
+    {
+      "type": "Large",
+      "name": "Wolf",
+      "size": "Big",
+      "pattern": "predator",
+      "image": "./images/shopping-two/blue06.png"
+    },
+    {
+      "type": "Large",
+      "name": "Giraffe",
+      "size": "Big",
+      "pattern": "kind",
+      "image": "./images/shopping-two/yellow06.png"
+    },
+    {
+      "type": "Tiny",
+      "name": "Sparrow",
+      "size": "small",
+      "pattern": "bird",
+      "image": "./images/shopping-two/bird04.png"
+    }
+  ]
+}
